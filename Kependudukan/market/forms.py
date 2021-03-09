@@ -29,3 +29,8 @@ class FormRegistrasi(forms.ModelForm):
                 form.save()
             return redirect('/market')
         return render(self,'market/saveform.html', {'form':form})
+
+class UploadFileForm(forms.Form):
+    title = forms.CharField(max_length=50)
+    file = forms.FileField()
+
